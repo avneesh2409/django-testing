@@ -1,11 +1,18 @@
 from django import forms
-from .models import RegisterModel, Student
+from .models import RegisterModel, School, Student
 
 
 class RegisterForm(forms.ModelForm):
 
     class Meta():
         model = RegisterModel
+        fields = "__all__"
+
+
+class SchoolForm(forms.ModelForm):
+
+    class Meta():
+        model = School
         fields = "__all__"
 
 

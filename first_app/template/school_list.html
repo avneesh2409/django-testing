@@ -2,10 +2,9 @@
 <div class="col-md-12">
   <h1>Welcome to List View</h1>
   {% for school in school_list %}
-  <ol>
-    <h1>
-      <li><a href="{{school.id}}/">{{school.name}}</a></li>
-    </h1>
-  </ol>
+  <ul class="nav">
+    <li><a href="{{school.id}}/">{{school.name}}</a></li>
+  </ul>
+  {% endfor %}
 </div>
-{% endfor %} {% endblock %}
+{% endblock %}
