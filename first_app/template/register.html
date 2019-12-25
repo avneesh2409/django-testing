@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="row">
+	<div class="col-md-12 text-center">
+	
+		<h1>Register Here</h1>
+		<form method = "POST">
+			{% csrf_token %}
+			{{form.as_p}}
+			<button type="submit" onclick="alert('successfully registered')" class = "btn btn-primary">Register</button>
+		</form>
+	
+</div>
+
+{% endblock %}
