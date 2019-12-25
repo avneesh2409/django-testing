@@ -1,0 +1,11 @@
+{% extends 'index.html' %} {% block content %}
+<div class="col-md-12">
+  <h1>Welcome to List View</h1>
+  {% for school in school_list %}
+  <ol>
+    <h1>
+      <li><a href="{{school.id}}/">{{school.name}}</a></li>
+    </h1>
+  </ol>
+</div>
+{% endfor %} {% endblock %}

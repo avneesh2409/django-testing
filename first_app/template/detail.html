@@ -1,0 +1,13 @@
+{% extends 'index.html' %} {% block content %}
+<div class="col-md-12">
+  <h1>Welcome to Detail View</h1>
+  <h1>
+    {{school_detail.name}}
+  </h1>
+  {% for student in school_detail.students.all %}
+  <p>
+    <em>{{student.name}}</em> who is <strong>{{student.age}}</strong> years old
+  </p>
+  {% endfor %}
+</div>
+{% endblock %}
