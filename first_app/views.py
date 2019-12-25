@@ -35,3 +35,7 @@ def register(request):
 		else:
 			print("invalid form")
 	return render(request,'register.html',{'title':title,'form':forms})
+
+def users(request):
+	users = RegisterModel.objects.all()
+	return render(request,'users.html',{'users':users,'title':'show users'})

@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="row">
+	<div class="col-md-12 text-center">
+		<h1>Users are here</h1>
+		<table class="table table-hover">
+			<tr><th>User Name</th><th>Password</th><th>Email</th></tr>
+		{% for user in users %}
+			<tr>
+				<td>{{user.FullName}}</td>
+				<td>{{user.Password}}</td>
+				<td>{{user.email}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+	</div>
+
+{% endblock %}

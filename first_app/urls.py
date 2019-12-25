@@ -10,4 +10,5 @@ urlpatterns = [
     url('^event/',event,name="event"),
     url('^contact/',contact,name="contact"),
     url('^register/',register,name="register"),
+    url('^users/',users,name="users"),
 ]
