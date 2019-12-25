@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import RegisterForm
+from .forms import RegisterForm,StudentForm
 from .models import RegisterModel, School
 from django.views.generic import ListView, DetailView
 from django.http import HttpResponseRedirect
@@ -9,6 +9,15 @@ from django.http import HttpResponseRedirect
 class SchoolListView(ListView):
     model = School
     template_name = 'school_list.html'
+
+def student(request):
+	form = StudentForm()
+	if request.method == 'POST':
+		form = StudentForm(request.POST)
+		if form.is_valid():
+			form.save(commit=True)
+			return index(request)
+	return render(request,'student.html',{'form':form,'title':'student Register'})
 
 
 class StudentDetailView(DetailView):

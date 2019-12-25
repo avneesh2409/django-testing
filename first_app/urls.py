@@ -5,6 +5,7 @@ from .views import *
 app_name = "first_app"
 
 urlpatterns = [
+    url('^student', student, name='student'),
     url('^school_list/(?P<pk>[-\w]+)/$',
         StudentDetailView.as_view(), name='detail'),
     url('^school_list/', SchoolListView.as_view(), name="school_list"),
